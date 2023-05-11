@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import './variables';
+
+//* GLOBAL *//
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: $primaryBGColor;
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    color: $priamryTxtColor;
+    font-size: 1rem;
+    &:hover {
+        color: $primaryBTNColor;
+    }
+}
+
+//* HEADER *//
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 60px;
+    width: 100%;
+    max-width: 1200px;
+    .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .links {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.cta_btn {
+    display: flex;
+    gap: 2rem;
+}
+
+.toggle_btn {
+    color: $priamryTxtColor;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    color: $priamryTxtColor;
+    padding: 0.5rem 1rem;
+    border: 2px solid $primaryBTNColor;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+        background: $primaryBTNColor;
+        color: $primaryNavColor;
+    }
+}
+
+//* DROPDOWN MENU *//
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 0;
+    text-align: center;
+    background: rgba($color: rgb(151, 0, 0), $alpha: 1.0);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem;
+    }
+    .action_btn {
+        border: none;
+        padding: 0;
+    }
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+//* RESPONSIVE DESIGN *//
+
+@media (max-width: 768px) {
+    .nav_bar .links,
+    .cta_btn {
+        display: none;
+    }
+    .nav_bar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}

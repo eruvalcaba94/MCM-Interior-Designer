@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Mid-Century Mindset</title>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+            <div class="logo"><a href="#">Mid-Century Mindset</a></div>
+            <ul class="links">
+                <li><a href="about">How It Started</a></li>
+                <li><a href="services">How We Can Help</a></li>
+                <li><a href="contact">Ask Us Anything</a></li>
+            </ul>
+            <div class="cta_btn">
+                <a href="#" class="action_btn">Get Started</a>
+                <a href="#" class="action_btn">Login</a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="about">How It Started</a></li>
+                <li><a href="services">How We Can Help</a></li>
+                <li><a href="contact">Ask Us Anything</a></li>
+                <li><a href="#" class="action_btn">Get Started</a></li>
+                <li><a href="#" class="action_btn">Login</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+        }
+    </script>
+</body>
+</html>
