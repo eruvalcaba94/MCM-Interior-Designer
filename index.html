@@ -12,30 +12,41 @@
     <title>Mid-Century Mindset</title>
 </head>
 <body>
-    <header>
-        <nav class="nav_bar">
-            <div class="logo"><a href="#">Mid-Century Mindset</a></div>
-            <ul class="links">
-                <li><a href="about">How It Started</a></li>
-                <li><a href="services">How We Can Help</a></li>
-                <li><a href="contact">Ask Us Anything</a></li>
-            </ul>
-            <div class="cta_btn">
-                <a href="#" class="action_btn">Get Started</a>
-                <a href="#" class="action_btn">Login</a>
+    <div class="container">
+        <header>
+            <nav class="nav_bar">
+                <div class="logo"><a href="#">Mid-Century Mindset</a></div>
+                <ul class="links">
+                    <li><a href="about">How It Started</a></li>
+                    <li><a href="services">How We Can Help</a></li>
+                    <li><a href="contact">Ask Us Anything</a></li>
+                </ul>
+                <div class="cta_btn">
+                    <a href="#" class="action_btn">Get Started</a>
+                    <a href="#" class="action_btn">Login</a>
+                </div>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="dropdown_menu">
+                    <li><a href="about">How It Started</a></li>
+                    <li><a href="services">How We Can Help</a></li>
+                    <li><a href="contact">Ask Us Anything</a></li>
+                    <li><a href="#" class="action_btn">Get Started</a></li>
+                    <li><a href="#" class="action_btn">Login</a></li>
+                </div>
+            </nav>
+        </header>
+    
+        <section class="hero_container">
+            <div class="hero_contentContainer">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                <a href="#" class="action_btn">Take A Closer Look</a>
             </div>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="dropdown_menu">
-                <li><a href="about">How It Started</a></li>
-                <li><a href="services">How We Can Help</a></li>
-                <li><a href="contact">Ask Us Anything</a></li>
-                <li><a href="#" class="action_btn">Get Started</a></li>
-                <li><a href="#" class="action_btn">Login</a></li>
-            </div>
-        </nav>
-    </header>
+        </section>
+    </div>
+    
 
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
