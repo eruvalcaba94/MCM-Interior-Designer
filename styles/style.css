@@ -83,7 +83,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -143,6 +143,41 @@ header {
 
 .dropdown_menu.open {
   height: 240px;
+}
+
+.experience_flow_section {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 6rem;
+}
+.experience_flow_section img {
+  width: auto;
+  height: 500px;
+}
+
+.experience_flow_mirrored {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 2rem 6rem;
+}
+.experience_flow_mirrored img {
+  width: 755px;
+  height: 500px;
+}
+
+.section_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.section_content h2 {
+  font-size: 32px;
+  padding-bottom: 1rem;
+}
+.section_content p {
+  padding: 0 4rem;
 }
 
 @media (max-width: 768px) {

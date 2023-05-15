@@ -3,3 +3,9 @@
     align-items: center;
     justify-content: center;
 }
+@mixin experienceFlex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    margin: 2rem 6rem;
+}
+
