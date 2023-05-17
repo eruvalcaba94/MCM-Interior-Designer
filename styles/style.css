@@ -180,6 +180,49 @@ header {
   padding: 0 4rem;
 }
 
+.pricing_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #603140;
+}
+
+.pricing_option {
+  margin: 3rem 1rem;
+  background: #F5E7E0;
+}
+.pricing_option img {
+  max-width: 100%;
+  height: 280px;
+}
+
+.pricing_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+}
+.pricing_content h2 {
+  padding-bottom: 1rem;
+  font-size: 32px;
+}
+.pricing_content .pricing_amount {
+  display: inline-flex;
+  gap: 1rem;
+  font-size: 24px;
+  padding-bottom: 2rem;
+}
+.pricing_content .pricing_amount span {
+  color: gray;
+  text-decoration: line-through;
+}
+.pricing_content .pricing_text {
+  font-size: 16px;
+  padding: 0 2rem;
+  padding-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
   .nav_bar .links,
   .cta_btn {
