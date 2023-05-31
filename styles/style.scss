@@ -226,6 +226,38 @@ header {
     }
 }
 
+//* REVIEWS SECTION *//
+
+.reviews {
+    background: #e59400;
+}
+
+.review_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    .review_title {
+        padding: 10px 0;
+    }
+    .review_tag {
+        padding: 10px 0;
+        font-size: 36px;
+    }
+    a {
+        margin: 1rem;
+    }
+}
+
+.review_card {
+    background: #fff;
+    border-radius: 20px;
+    width: 300px;
+    padding: 2rem 1rem;
+}
+
+
 //* RESPONSIVE DESIGN *//
 
 @media (max-width: 768px) {
