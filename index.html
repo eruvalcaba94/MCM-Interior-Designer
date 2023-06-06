@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="/styles/style.css">
     <title>Mid-Century Mindset</title>
 </head>
@@ -126,104 +126,76 @@
                 <a href="#" class="action_btn">See all reviews</a>
             </div>
 
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide review_card">
-                        <div class="card_content">
-                            <div class="card_author">
-                                <h3>by Adrian G.</h3>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <div class="card_title">
-                                        <div class="card_description">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At voluptas esse nam qui fugiat neque facere ipsam iusto molestiae aperiam ullam in repellat, blanditiis officiis?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="review_wrapper">
+                <i class="fa-solid fa-angle-left" id="left"></i>
+                <ul class="review_carousel">
+                    <li class="review_card">
+                        <h3>by Adrian G.</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                    </div>
+                        <span class="card_review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, natus.</span>
+                    </li>
 
-                    <div class="swiper-slide review_card">
-                        <div class="card_content">
-                            <div class="card_author">
-                                <h3>by Adrian G.</h3>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <div class="card_title">
-                                        <div class="card_description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <li class="review_card">
+                        <h3>by Andy C.</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                    </div>
+                        <span class="card_review">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae earum optio aliquid laudantium, voluptas atque esse. Quod iure, itaque at tenetur molestias ex a ut consequatur, sint in laudantium iste.</span>
+                    </li>
 
-                    <div class="swiper-slide review_card">
-                        <div class="card_content">
-                            <div class="card_author">
-                                <h3>by Adrian G.</h3>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <div class="card_title">
-                                        <div class="card_description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eaque neque deleniti placeat iste blanditiis.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <li class="review_card">
+                        <h3>by Jose G.</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                    </div>
+                        <span class="card_review">Lorem ipsum dolor sit amet consectetur.</span>
+                    </li>
 
-                    <div class="swiper-slide review_card">
-                        <div class="card_content">
-                            <div class="card_author">
-                                <h3>by Adrian G.</h3>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <div class="card_title">
-                                        <div class="card_description">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <li class="review_card">
+                        <h3>by McKenna E.</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-scrollbar"></div>
-                <div class="swiper-pagination"></div>
+                        <span class="card_review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam repudiandae officiis amet ex provident minima delectus et quaerat! Facilis harum temporibus ad, nostrum consequatur assumenda?</span>
+                    </li>
+
+                    <li class="review_card">
+                        <h3>by Marly C.</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="card_review">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-angle-right" id="right"></i>
             </div>
-            
         </section>
 
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
         const toggleBtnIcon = document.querySelector('.toggle_btn i')
@@ -232,34 +204,6 @@
         toggleBtn.onclick = function () {
             dropDownMenu.classList.toggle('open')
         }
-    </script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 1,
-          centeredSlides: false,
-          slidesPerGroupSkip: 1,
-          grabCursor: true,
-          keyboard: {
-            enabled: true,
-          },
-          breakpoints: {
-            769: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-          },
-          scrollbar: {
-            el: ".swiper-scrollbar",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
     </script>
 </body>
 </html>
