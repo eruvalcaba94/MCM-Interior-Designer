@@ -13,197 +13,295 @@
     <title>Mid-Century Mindset</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav class="nav_bar">
-                <div class="logo"><a href="#">Mid-Century Mindset</a></div>
-                <ul class="links">
-                    <li><a href="about">How It Started</a></li>
-                    <li><a href="services">How We Can Help</a></li>
-                    <li><a href="contact">Ask Us Anything</a></li>
-                </ul>
-                <div class="cta_btn">
-                    <a href="#" class="action_btn">Get Started</a>
-                    <a href="#" class="action_btn">Login</a>
-                </div>
-                <div class="toggle_btn">
+    <section class="headerContainer">
+        <div class="navBar">
+            <div class="flexNavBar">
+                <div class="logo"><a href="#">MCM</a></div>
+                <button class="mobileNavBar_Hamburger" id="hamburger">
                     <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="dropdown_menu">
-                    <li><a href="about">How It Started</a></li>
-                    <li><a href="services">How We Can Help</a></li>
-                    <li><a href="contact">Ask Us Anything</a></li>
-                    <li><a href="#" class="action_btn">Get Started</a></li>
-                    <li><a href="#" class="action_btn">Login</a></li>
-                </div>
+                </button>
+            </div>
+            <nav class="linksHidden">
+                <ul>
+                    <li class="navLink"><a href="about">How It Started</a></li>
+                    <li class="navLink"><a href="services">How We Can Help</a></li>
+                    <li class="navLink"><a href="contact">Ask Us Anything</a></li>
+                    <li class="navLink"><a href="signup">Get Started</a></li>
+                    <li class="navLink"><a href="login">Login</a></li>
+                </ul>
             </nav>
-        </header>
-    
-        <section class="hero_container">
-            <div class="hero_contentContainer">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-                <a href="#" class="action_btn">Take A Closer Look</a>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="experience_container">
-            <div class="experience_flow_section">
-                <div class="section_image">
-                    <img src="./img/livingroom_tv.jpg" alt="livingroom with TV">
-                </div>
-                <div class="section_content">
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, voluptates?</p>
-                </div>
-            </div>
-            <div class="experience_flow_mirrored">
-                <div class="section_image">
-                    <img src="./img/sunlight_bedroom.jpg" alt="sunlit bedroom">
-                </div>
-                <div class="section_content">
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, voluptates?</p>
-                </div>
-            </div>
-        </section>
+    <section class="heroContainer">
+        <div class="heroContentContainer">
+            <h2>Your Mid-Century Modern Oasis</h2>
+            <h3>Transform Your Space with Timeless Elegance</h3>
+            <a href="#" class="actionBtn">Schedule a Consultation</a>
+        </div>
+    </section>
 
-        <section class="pricing_container">
-            <div class="pricing_option">
-                <div class="pricing_img">
-                    <img src="./img/consultation.jpg" alt="cartoon consultation">
+    <section class="pricingContainer">
+        <div class="pricingMobileFlow">
+            <div class="pricingOption">
+                <div class="pricingImg">
+                    <img src="./img/consultation.jpg" alt="cartoon consultation" width="880" height="586" loading="lazy">
                 </div>
-                <div class="pricing_content">
-                    <h2>Lorem, ipsum.</h2>
-                    <div class="pricing_amount">
-                        <span>$99</span>
-                        <h3>$50</h3>
+                <div class="pricingContent">
+                    <h2>Bronze Level Design Package</h2>
+                    <div class="pricingAmount">
+                        <h3><span>$99</span> $50</h3>
                     </div>
-                    <div class="pricing_text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, incidunt!</p>
+                    <div class="pricingText">
+                        <p>Our experts will provide you with a comprehensive consultation to assess your space and understand your goals.</p>
                     </div>
-                    <a href="#" class="action_btn">Lorem, ipsum dolor.</a>
+                    <a href="#" class="actionBtn">Lorem, ipsum dolor.</a>
                 </div>
             </div>
-            <div class="pricing_option">
-                <div class="pricing_img">
-                    <img src="./img/development.jpg" alt="cartoon development plan">
+            <div class="pricingOption">
+                <div class="pricingImg">
+                    <img src="./img/development.jpg" alt="cartoon development plan" width="880" height="586" loading="lazy">
                 </div>
-                <div class="pricing_content">
-                    <h2>Lorem, ipsum.</h2>
-                    <div class="pricing_amount">
+                <div class="pricingContent">
+                    <h2>Silver Level Design Package</h2>
+                    <div class="pricingAmount">
                         <span>$199</span>
                         <h3>$150</h3>
                     </div>
-                    <div class="pricing_text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, incidunt!</p>
+                    <div class="pricingText">
+                        <p>Our team will help you source and select the perfect pieces to elevate your space, ensuring a cohesive and stylish result.</p>
                     </div>
-                    <a href="#" class="action_btn">Lorem, ipsum dolor.</a>
+                    <a href="#" class="actionBtn">Lorem, ipsum dolor.</a>
                 </div>
             </div>
-            <div class="pricing_option">
-                <div class="pricing_img">
-                    <img src="./img/in-person.jpg" alt="cartoon brainstorm">
+            <div class="pricingOption">
+                <div class="pricingImg">
+                    <img src="./img/in-person.jpg" alt="cartoon brainstorm" width="880" height="586" loading="lazy">
                 </div>
-                <div class="pricing_content">
-                    <h2>Lorem, ipsum.</h2>
-                    <div class="pricing_amount">
+                <div class="pricingContent">
+                    <h2>Gold Level Design Package</h2>
+                    <div class="pricingAmount">
                         <span>$299</span>
                         <h3>$250</h3>
                     </div>
-                    <div class="pricing_text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, incidunt!</p>
+                    <div class="pricingText">
+                        <p>Our team will oversee the entire design process, from procurement to installation, ensuring a seamless execution of your mid-century modern vision.</p>
                     </div>
-                    <a href="#" class="action_btn">Lorem, ipsum dolor.</a>
+                    <a href="#" class="actionBtn">Lorem, ipsum dolor.</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="reviews">
-            <div class="review_content">
-                <h2 class="review_title">Reviews</h2>
-                <h2 class="review_tag">Share the love!</h2>
-                <a href="#" class="action_btn">See all reviews</a>
+    <section class="experienceContainer">
+        <div class="experienceMobileFlow">
+            <div class="experienceFlowSection">
+                <div class="sectionImage">
+                    <img src="./img/livingroom_tv.jpg" alt="livingroom with TV" width="880" height="586" loading="lazy">
+                </div>
+                <div class="sectionContent">
+                    <h2>Timeless Elegance</h2>
+                    <p>Discover the perfect harmony of form and function with our expertly curated collection of mid-century modern furniture.</p>
+                </div>
+            </div>
+            <div class="experienceFlowSection" id="mirrored">
+                <div class="sectionImage">
+                    <img src="./img/sunlight_bedroom.jpg" alt="sunlit bedroom" width="880" height="586" loading="lazy">
+                </div>
+                <div class="sectionContent">
+                    <h2>Elevate Your Space</h2>
+                    <p>From iconic chairs to sleek coffee tables, we bring timeless elegance to your home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviewContainer">
+        <div class="reviewContent">
+            <h2>Reviews</h2>
+            <span>Share the love!</span>
+            <a href="#" class="actionBtn">See all reviews</a>
+        </div>
+
+        <div class="reviewWrapper">
+            <ul class="reviewCarousel">
+                <li class="reviewCard">
+                    <h3>by Adrian G.</h3>
+                    <div class="rating" id="first-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="cardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, natus.</span>
+                </li>
+
+                <li class="reviewCard">
+                    <h3>by Andy C.</h3>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="cardText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae earum optio aliquid laudantium, voluptas atque esse. Quod iure, itaque at tenetur molestias ex a ut consequatur, sint in laudantium iste.</span>
+                </li>
+
+                <li class="reviewCard">
+                    <h3>by Jose G.</h3>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="cardText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptas minima labore libero repellat! At tempora, quidem quisquam enim esse saepe tenetur veritatis ut eum neque eligendi pariatur libero placeat.</span>
+                </li>
+
+                <li class="reviewCard">
+                    <h3>by McKenna E.</h3>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="cardText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam repudiandae officiis amet ex provident minima delectus et quaerat! Facilis harum temporibus ad, nostrum consequatur assumenda?</span>
+                </li>
+
+                <li class="reviewCard">
+                    <h3>by Marly C.</h3>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="cardText">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                </li>
+            </ul>
+            <div class="carouselControls">
+                <button id="prevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="mainFooterContainer">
+        <div class="mainFooterTabs">
+            <div class="footerTab">
+                <div class="mobileFooterHeading">
+                    <button class="mobileFooterBtn" id="company">
+                        <p class="table_title">Company</p>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                </div>
+                <div class="companyItemsHidden">
+                    <ul>
+                        <li class="table_item">
+                            <a href="#">Careers</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Reviews</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Stories</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="review_wrapper">
-                <i class="fa-solid fa-angle-left" id="left"></i>
-                <ul class="review_carousel">
-                    <li class="review_card">
-                        <h3>by Adrian G.</h3>
-                        <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <span class="card_review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, natus.</span>
-                    </li>
-
-                    <li class="review_card">
-                        <h3>by Andy C.</h3>
-                        <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <span class="card_review">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae earum optio aliquid laudantium, voluptas atque esse. Quod iure, itaque at tenetur molestias ex a ut consequatur, sint in laudantium iste.</span>
-                    </li>
-
-                    <li class="review_card">
-                        <h3>by Jose G.</h3>
-                        <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <span class="card_review">Lorem ipsum dolor sit amet consectetur.</span>
-                    </li>
-
-                    <li class="review_card">
-                        <h3>by McKenna E.</h3>
-                        <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <span class="card_review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam repudiandae officiis amet ex provident minima delectus et quaerat! Facilis harum temporibus ad, nostrum consequatur assumenda?</span>
-                    </li>
-
-                    <li class="review_card">
-                        <h3>by Marly C.</h3>
-                        <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <span class="card_review">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-                    </li>
-                </ul>
-                <i class="fa-solid fa-angle-right" id="right"></i>
+            <div class="footer_tab">
+                <div class="mobileFooterHeading">
+                    <button class="mobileFooterBtn" id="explore">
+                        <p class="table_title">Explore</p>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                </div>
+                <div class="exploreItemsHidden">
+                    <ul>
+                        <li class="table_item">
+                            <a href="#">Style Quiz</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Financing</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Help Center</a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#">Promotions</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section>
 
-    </div>
+            <div class="footer_tab">
+                <div class="mobileFooterHeading">
+                    <button class="mobileFooterBtn" id="contact">
+                        <p class="table_title">Contact</p>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                </div>
+                <div class="contactItemsHidden">
+                    <ul>
+                        <li class="table_item">
+                            <span>Call </span>
+                            <a href="tel:555-555-5555">555-555-5555</a>
+                        </li>
+                        <li class="table_item">
+                            <span>Text </span>
+                            <a href="tel:888-888-8888">888-888-8888</a>
+                        </li>
+                        <li class="table_item">
+                            <span>Email </span>
+                            <a href="mailto:midcenturymodern@fakemail.com">midcenturymodern@fakemail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-        }
-    </script>
+            <div class="footer_tab">
+                <div class="mobileFooterHeading">
+                    <button class="mobileFooterBtn" id="socials">
+                        <p class="table_title">Follow Us</p>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                </div>
+                <div class="socialsItemsHidden">
+                    <ul class="social_icons">
+                        <li class="table_item">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="table_item">
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="closingPromise">
+                <h3>Guarantee Promise</h3>
+                <p>We're committed to your satisfaction. From handpicked mid-century modern furniture to personalized design guidance, we prioritize quality and timeless style. We work closely with you to create a space that reflects your unique vision.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

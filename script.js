@@ -1,65 +1,95 @@
-const carousel = document.querySelector(".review_carousel");
-const arrowBtns = document.querySelectorAll(".review_wrapper i");
-const firstCardWidth = carousel.querySelector(".review_card").offsetWidth;
-const carouselChildrens = [...carousel.children];
+// * DROPDOWN MENU *
 
-let isDragging = false, startX, startScrollLeft;
+const dropdownIcon = document.getElementById('hamburger');
+const dropdownMenu = document.querySelector('.linksHidden');
 
-// Get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+dropdownIcon.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('linksOpen');
+});
 
-// Insert copies of the last few cards to the beginning of the carousel for infinite scrolling
-carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-})
 
-// Insert copies of the first few cards to the end of the carousel for infinite scrolling
-carouselChildrens.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-})
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
-    })
-})
+// * REVIEW SLIDER *
 
-const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    //Records the initial cursor and scroll position of the carousel
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-}
+// Get the necessary elements
+const carousel = document.querySelector('.reviewCarousel');
+const carouselWidth = carousel.offsetWidth;
+const firstCard = document.getElementById('first-review');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-const dragging = (e) => {
-    if(!isDragging) return; // if isDragging is false return from here
-    // Updates the scroll position of the carousel based on the cursor movement
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-}
+// Function to move the carousel to the previous slide
+const moveCarouselPrev = () => {
+  carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
+  carousel.style.transform = `translateX(-${carouselWidth}px)`;
+  setTimeout(() => {
+    carousel.style.transform = 'translateX(0)';
+  }, 300);
+};
 
-const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-}
+// Function to move the carousel to the next slide
+const moveCarouselNext = () => {
+  carousel.style.transform = `translateX(-${carouselWidth}px)`;
+  setTimeout(() => {
+    carousel.appendChild(carousel.firstElementChild);
+    carousel.style.transform = 'translateX(0)';
+  }, 300);
+};
 
-const infiniteScroll = () => {
-    // If the carousel is at the beginning, scroll to the end
-    if(carousel.scrollLeft === 0) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth);
-        carousel.classList.remove("no-transition");
-    } 
-    // If the carousel is at the end, scroll to the beginning
-    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-    }
-}
+// Interval to continuously move the carousel
+let intervalId;
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging)
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll)
+const startCarousel = () => {
+  intervalId = setInterval(moveCarouselNext, 5000);
+};
+
+const stopCarousel = () => {
+  clearInterval(intervalId);
+};
+
+// // Start the carousel
+// startCarousel();
+
+// Pause carousel on hover
+carousel.addEventListener('mouseenter', stopCarousel);
+
+// Resume carousel on mouse leave
+carousel.addEventListener('mouseleave', startCarousel);
+
+// Move carousel to previous slide on prevBtn click
+prevBtn.addEventListener('click', moveCarouselPrev);
+
+// Move carousel to next slide on nextBtn click
+nextBtn.addEventListener('click', moveCarouselNext);
+
+
+
+// * FOOTER DROPDOWN *
+
+const companyIcon = document.getElementById('company');
+const companyMenu = document.querySelector('.companyItemsHidden');
+
+companyIcon.addEventListener('click', () => {
+    companyMenu.classList.toggle('companyItemsOpen');
+});
+
+const exploreIcon = document.getElementById('explore');
+const exploreMenu = document.querySelector('.exploreItemsHidden');
+
+exploreIcon.addEventListener('click', () => {
+    exploreMenu.classList.toggle('exploreItemsOpen');
+});
+
+const contactIcon = document.getElementById('contact');
+const contactMenu = document.querySelector('.contactItemsHidden');
+
+contactIcon.addEventListener('click', () => {
+    contactMenu.classList.toggle('contactItemsOpen');
+});
+
+const socialsIcon = document.getElementById('socials');
+const socialsMenu = document.querySelector('.socialsItemsHidden');
+
+socialsIcon.addEventListener('click', () => {
+    socialsMenu.classList.toggle('socialsItemsOpen');
+});
