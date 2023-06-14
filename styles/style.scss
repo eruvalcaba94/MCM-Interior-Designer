@@ -42,12 +42,14 @@ a, ul {
 .headerContainer {
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .flexNavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s;
     padding: 0 2rem;
     .logo a {
         font-size: 26px;
@@ -62,7 +64,7 @@ a, ul {
         color: $primaryBGColor;
     }
     &:hover {
-        background: $primaryBGColor;
+        background: white;
         transition: all 0.4s ease;
         a, button {
             color: $priamryTxtColor;
@@ -71,7 +73,7 @@ a, ul {
 }
 
 .linksHidden {
-    display: none;
+    opacity: 0;
 }
 
 .linksOpen {
@@ -79,8 +81,10 @@ a, ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $primaryBGColor;
-    transition: all 0.8s ease;
+    background: white;
+    padding-bottom: 2rem;
+    transition: 0.3s;
+    opacity: 1;
     .navLink {
         font-size: 16px;
         font-weight: 400;
@@ -317,7 +321,9 @@ a, ul {
 .exploreItemsHidden,
 .contactItemsHidden,
 .socialsItemsHidden {
-    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .companyItemsOpen,
@@ -328,8 +334,11 @@ a, ul {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    height: 135px;
     background: $primaryBGColor;
-    transition: all 0.8s ease;
+    transition: all 0.5s;
+    opacity: 1;
+    overflow: hidden;
     .table_item {
         margin: 11px 0;
     }    

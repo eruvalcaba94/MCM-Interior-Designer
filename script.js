@@ -1,19 +1,63 @@
-// * DROPDOWN MENU *
+// * STICKY HEADER * //
+
+// Get the sticky header element
+var header = document.querySelector('.flexNavBar');
+var logoColor = document.getElementById('logo');
+var hamburgerColor = document.getElementById('hamburger');
+
+// Function to handle scroll event
+function handleScroll() {
+  // Get the current scroll position
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Check if the scroll position is greater than 0
+  if (scrollPosition > 0) {
+    // Change the background color to white
+    header.style.backgroundColor = 'white';
+    logoColor.style.color = '#1d1d1f';
+    hamburgerColor.style.color = '#1d1d1f';
+  } else {
+    // Reset the background color
+    header.style.backgroundColor = '';
+    logoColor.style.color = '';
+    hamburgerColor.style.color = '';
+  }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+
+
+// * DROPDOWN MENU * //
 
 const dropdownIcon = document.getElementById('hamburger');
 const dropdownMenu = document.querySelector('.linksHidden');
+const navMenu = document.querySelector('.flexNavBar');
+const navLogo = document.getElementById('logo');
+const navHamburger = document.getElementById('hamburger');
 
 dropdownIcon.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('linksOpen');
+  dropdownMenu.classList.toggle('linksOpen');
+  if (dropdownMenu.classList.contains('linksOpen')) {
+    navMenu.style.backgroundColor = 'white';
+    navLogo.style.color = '#1d1d1f';
+    navHamburger.style.color = '#1d1d1f';
+  } else {
+    navMenu.style.backgroundColor = '';
+    navLogo.style.color = '';
+    navHamburger.style.color = '';
+  }
 });
 
 
 
-// * REVIEW SLIDER *
+// * REVIEW SLIDER * //
 
 // Get the necessary elements
 const carousel = document.querySelector('.reviewCarousel');
 const carouselWidth = carousel.offsetWidth;
+const paddingRight = 100;
 const firstCard = document.getElementById('first-review');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -21,19 +65,19 @@ const nextBtn = document.getElementById('nextBtn');
 // Function to move the carousel to the previous slide
 const moveCarouselPrev = () => {
   carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
-  carousel.style.transform = `translateX(-${carouselWidth}px)`;
+  carousel.style.transform = `translateX(-${carouselWidth + paddingRight}px)`;
   setTimeout(() => {
     carousel.style.transform = 'translateX(0)';
-  }, 300);
+  });
 };
 
 // Function to move the carousel to the next slide
 const moveCarouselNext = () => {
-  carousel.style.transform = `translateX(-${carouselWidth}px)`;
+  carousel.style.transform = `translateX(-${carouselWidth + paddingRight}px)`;
   setTimeout(() => {
     carousel.appendChild(carousel.firstElementChild);
     carousel.style.transform = 'translateX(0)';
-  }, 300);
+  });
 };
 
 // Interval to continuously move the carousel
@@ -47,8 +91,8 @@ const stopCarousel = () => {
   clearInterval(intervalId);
 };
 
-// // Start the carousel
-// startCarousel();
+// Start the carousel
+startCarousel();
 
 // Pause carousel on hover
 carousel.addEventListener('mouseenter', stopCarousel);
@@ -64,7 +108,7 @@ nextBtn.addEventListener('click', moveCarouselNext);
 
 
 
-// * FOOTER DROPDOWN *
+// * FOOTER DROPDOWN * //
 
 const companyIcon = document.getElementById('company');
 const companyMenu = document.querySelector('.companyItemsHidden');
